@@ -1,0 +1,117 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage[spanish,mexico]{babel}
+\usepackage{comment}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{pdflscape}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{ragged2e}
+\usepackage{parskip}
+\usetheme{CambridgeUS}
+\usecolortheme{beaver}
+\usepackage{transparent}
+\usepackage{eso-pic}
+
+\title[\insertframenumber/\inserttotalframenumber]{ \bf Programación Concurrente }
+
+\author{Cervantes Bruno\\ ,Razo Sotelo Blanca Estrella\\, Gutiérrez Hernández Jetzael\\}
+\institute{Facultad de Ciencias, UNAM}
+\date{\today}
+\setbeamertemplate{background}
+{\transparent{0.05}
+
+\includegraphics[width=1.0\paperwidth, height=1.0\paperheight]{escudo_fciencias.png} }
+
+\begin{document}
+
+\begin{frame}[plain] 
+\titlepage
+\begin{center}
+\includegraphics[scale=0.2]{Downloads/logo_unam.jpg} 
+  \hspace{8cm}]{\includegraphics[scale=0.04]{Downloads/escudo_fciencias.png} }    
+\end{center}
+\end{frame}
+
+
+\begin{frame}{Índice}
+  \tableofcontents
+\end{frame}
+% Sección 1: Introducción a la programación concurrente
+\section{Introducción }
+\begin{frame}{Introducción a la Programación Concurrente}
+\begin{block}
+    
+
+    \begin{itemize}
+        \item \textbf{Definición:} 
+            La programación concurrente es una técnica que permite ejecutar múltiples tareas de forma intercalada dentro de un mismo sistema. Aunque no se ejecutan simultáneamente, se gestionan para aprovechar mejor los recursos y mejorar la capacidad de respuesta.\pause
+        \item \textbf{Objetivo:} 
+            Maximizar el uso eficiente de la CPU y mejorar la capacidad de respuesta de las aplicaciones mediante la ejecución de tareas de manera coordinada.\pause
+        \item \textbf{Conceptos Clave:}
+            \begin{itemize}
+                \item \textbf{Hilos (Threads)}: Unidades de ejecución dentro de un proceso.
+                \item \textbf{Sincronización}: Mecanismos para coordinar el acceso a recursos compartidos.\pause
+            \end{itemize}
+        \item \textbf{Ejemplo:} 
+            Un servidor web que maneja múltiples solicitudes de usuarios simultáneamente.
+    \end{itemize}
+    \end{block}
+\end{frame}
+
+
+\section{Comparacion entre las distancias programaciones}
+
+\begin{frame}
+  \frametitle{Programación Paralela}
+  \begin{alertblock}
+      
+
+  \begin{itemize}
+    \item \textbf{Definición:} La programación paralela se enfoca en dividir un problema en subproblemas que pueden ser resueltos simultáneamente en múltiples núcleos de procesamiento o procesadores.\pause
+    \item \textbf{Objetivo:} Reducir el tiempo total de ejecución al utilizar múltiples unidades de procesamiento para realizar cálculos en paralelo.\pause
+    \item \textbf{Ejemplos:} Algoritmos de procesamiento de imágenes, cálculos científicos de alto rendimiento.
+    \item \textbf{Desafío Principal:} Dividir el trabajo de manera eficiente y gestionar la combinación de los resultados para obtener una solución coherente.
+  \end{itemize}
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+\begin{alertblock}
+    
+
+  \frametitle{Programación Distribuida}
+  \begin{enumerate}
+      
+    \item \textbf{Definición:} La programación distribuida se refiere a sistemas en los que el procesamiento se realiza en varios nodos o máquinas conectados a través de una red.\pause
+    \item \textbf{Objetivo:} Permitir que múltiples máquinas colaboren para resolver un problema, proporcionando escalabilidad y redundancia.\pause
+    \item \textbf{Ejemplos:} Servicios web, sistemas de bases de datos distribuidas, aplicaciones en la nube.\pause
+    \item \textbf{Desafío Principal:} Coordinación y comunicación entre nodos que pueden tener latencias y fallos, así como la gestión de la consistencia y disponibilidad de datos.
+  \end{enumerate}
+  \end{alertblock}
+\end{frame}
+
+
+\section{Fundamentos de la Programación Concurrente}
+
+\begin{frame}{Fundamentos de la Programación Concurrente}
+  \begin{block}{Fundamentos}
+    \begin{enumerate}
+         \item \textbf{Concepto de Hilos}:
+            Los hilos son unidades de ejecución dentro de un proceso que permiten la ejecución simultánea de partes de un programa. Comparten el mismo espacio de memoria, facilitando la comunicación entre ellos.
+        \item \textbf{Procesos vs Hilos}:
+            \textbf{Procesos}: Tienen espacio de memoria propio y la comunicación entre procesos puede ser costosa.
+            \textbf{Hilos}: Comparten memoria dentro de un proceso, lo que facilita la comunicación, pero puede complicar la sincronización.
+        \item \textbf{Multitarea}:
+            Capacidad de un sistema operativo para ejecutar múltiples tareas simultáneamente, ya sea con múltiples hilos dentro de un proceso o con varios procesos.
+    \end{enumerate}
+  \end{block}
+  \end{frame}
+\end{document}
+
+
+
+    
+    
+
+
